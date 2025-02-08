@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About - Incense Coffee & Shisha">
+  <main class="pt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="glass backdrop-blur-md rounded-2xl p-8 md:p-12">
+        <h1 class="text-4xl font-bold text-white mb-8 text-center">About Incense</h1>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="relative rounded-xl overflow-hidden h-[400px] group">
+            {/* Video container with negative margins to crop letterboxing */}
+            <div class="absolute inset-0 -top-[25%] -bottom-[25%]">
+              <video
+                class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700"
+                autoplay
+                loop
+                muted
+                playsinline
+              >
+                <source src="/videos/hero.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            {/* Dark gradient overlay */}
+            <div class="absolute inset-0 bg-gradient-to-tr from-black/40 via-black/20 to-transparent"></div>
+            {/* Blue overlay */}
+            <div class="absolute inset-0 bg-blue-900/20 mix-blend-overlay backdrop-blur-[1px]"></div>
+            {/* Additional atmosphere */}
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30"></div>
+          </div>
+          
+          <div class="space-y-6">
+            <p class="text-white/90 text-lg">
+              Welcome to Incense, where we blend traditional coffee culture with modern sophistication. 
+              Our story began with a vision to create a unique space where people can enjoy premium coffee 
+              and authentic shisha in a contemporary setting.
+            </p>
+            
+            <p class="text-white/90 text-lg">
+              Every detail in Incense is carefully curated - from our selection of coffee beans to our 
+              premium shisha flavors, and from our modern interior design to our attentive service.
+            </p>
+            
+            <p class="text-white/90 text-lg">
+              We take pride in offering:
+            </p>
+            
+            <ul class="list-disc list-inside text-white/90 text-lg space-y-2">
+              <li>Premium coffee from carefully selected beans</li>
+              <li>Wide variety of exotic shisha flavors</li>
+              <li>Comfortable VIP rooms for private gatherings</li>
+              <li>Collection of board games for entertainment</li>
+              <li>Modern ambiance with carefully curated music</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

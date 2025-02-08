@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #7C444F;
+  --color-secondary: #9F5255;
+  --color-accent: #E16A54;
+  --color-highlight: #F39E60;
+  --color-text: #2D1518;  /* Dark burgundy for main text */
+  --color-text-light: #FFF6F7;  /* Light pink-white for light text */
+  --color-text-muted: #4A2429;  /* Muted burgundy for secondary text */
+}
+
+@layer base {
+  body {
+    @apply min-h-screen flex flex-col;
+    background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary), var(--color-accent));
+    color: var(--color-text-light);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-light);
+    @apply font-bold;
+  }
+
+  p {
+    color: var(--color-text-light);
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-highlight to-accent;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary transition-colors;
+  }
+  
+  .btn-outline {
+    @apply px-4 py-2 border-2 border-white text-white rounded-md hover:bg-white hover:text-primary transition-colors;
+  }
+
+  .nav-link {
+    @apply text-white/90 hover:text-white transition-colors relative;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute left-0 bottom-0 w-0 h-0.5 bg-highlight transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background: linear-gradient(-45deg, var(--color-primary), var(--color-secondary), var(--color-accent), var(--color-highlight));
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Fade in animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 107, 107, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 107, 107, 0.7);
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-primary {
+    color: var(--color-text-light);
+  }
+  .text-secondary {
+    color: var(--color-text-light);
+  }
+  .text-accent {
+    color: var(--color-highlight);
+  }
+  .text-highlight {
+    color: var(--color-highlight);
+  }
+  
+  .text-muted {
+    color: var(--color-text-light/80);
+  }
+
+  .text-dark {
+    color: var(--color-text);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+  .bg-highlight {
+    background-color: var(--color-highlight);
+  }
+
+  .hover\:bg-primary:hover {
+    background-color: var(--color-primary);
+  }
+  .hover\:bg-secondary:hover {
+    background-color: var(--color-secondary);
+  }
+  .hover\:bg-accent:hover {
+    background-color: var(--color-accent);
+  }
+  .hover\:bg-highlight:hover {
+    background-color: var(--color-highlight);
+  }
+
+  .hover\:text-primary:hover {
+    color: var(--color-text-light);
+  }
+  .hover\:text-secondary:hover {
+    color: var(--color-text-light);
+  }
+  .hover\:text-accent:hover {
+    color: var(--color-highlight);
+  }
+  .hover\:text-highlight:hover {
+    color: var(--color-highlight);
+  }
+}

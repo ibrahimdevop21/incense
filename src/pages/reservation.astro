@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ReservationForm from '../components/ReservationForm';
+---
+
+<Layout title="Reservation - Incense Coffee & Shisha">
+  <main class="pt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="glass backdrop-blur-md rounded-2xl p-8 md:p-12">
+        <h1 class="text-4xl font-bold text-white mb-8 text-center">Make a Reservation</h1>
+        <div class="max-w-2xl mx-auto">
+          <ReservationForm client:load />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero';
+import Features from '../components/Features';
+import QRSection from '../components/QRSection';
+---
+
+<Layout title="Incense Coffee & Shisha">
+  <main>
+    <Hero client:load />
+    
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Features client:load />
+      </div>
+    </section>
+
+    <section class="py-24 bg-gradient-to-b from-transparent to-black/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <QRSection client:load />
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  section {
+    flex: none;
+  }
+</style>

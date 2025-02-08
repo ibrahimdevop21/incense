@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.jsx';
+import menuData from '../data/menu.json';
+
+---
+
+<Layout title="Our Menu">
+  <main class="py-8 pt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-white">Our Menu</h1>
+        <p class="mt-4 text-lg text-white/80">Discover our delicious offerings</p>
+      </div>
+
+      <Menu client:load menuData={menuData} />
+    </div>
+  </main>
+</Layout>
+
+<script>
+  let currentLang = 'en';
+  const html = document.documentElement;
+
+  // Trigger a custom event that React components can listen to
+  window.dispatchEvent(new CustomEvent('languageChange', { detail: currentLang }));
+</script>

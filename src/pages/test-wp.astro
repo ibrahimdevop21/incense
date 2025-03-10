@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { fetchAPI } from '../utils/wordpress';
+
+let error = null;
+let data = null;
+
+try {
+  // Simple test query
+  const response = await fetchAPI(`
+    query TestConnection {
+      generalSettings {
+        title
+        description
+      }
+    }
+  `);
+  data = response;
+} catch (e) {
+  error = e.message;
+}
+---
+
+<Layout title="Test WordPress Connection">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">WordPress Connection Test</h1>
+    
+    <div class="bg-white shadow-lg rounded-lg p-6">
+      <h2 class="text-xl font-semibold mb-4">Connection Status:</h2>
+      
+      {error ? (
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+          <p class="font-bold">Error:</p>
+          <p>{error}</p>
+          <div class="mt-4">
+            <p class="font-semibold">Troubleshooting Steps:</p>
+            <ul class="list-disc ml-6 mt-2">
+              <li>Make sure WordPress is running (http://localhost:8000 should be accessible)</li>
+              <li>Verify WPGraphQL plugin is installed and activated</li>
+              <li>Check if GraphQL endpoint is accessible (http://localhost:8000/graphql)</li>
+              <li>Ensure CORS is properly configured in WordPress</li>
+            </ul>
+          </div>
+        </div>
+      ) : (
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+          <p class="font-bold">Success!</p>
+          <pre class="mt-2 overflow-auto">
+            {JSON.stringify(data, null, 2)}
+          </pre>
+        </div>
+      )}
+    </div>
+  </main>
+</Layout>

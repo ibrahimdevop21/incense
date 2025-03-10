@@ -1,0 +1,129 @@
+{
+  "categories": {
+    "desserts": [
+      { "name_en": "Fruit Salad", "name_ar": "فروت سلاد", "price": 85 },
+      { "name_en": "Fruit Salad with Ice Cream", "name_ar": "فروت سلاد ايس", "price": 100 },
+      { "name_en": "Fruit Salad Incense", "name_ar": "فروت سلاد إنسنس", "price": 125 },
+      { "name_en": "3 Scoops Ice Cream", "name_ar": "آيس كريم ٣ بوله", "price": 60 },
+      { "name_en": "Cheesecake", "name_ar": "تشيز كيك", "price": 75 },
+      { "name_en": "Chocolate Cake", "name_ar": "شوكليت كيك", "price": 80 },
+      { "name_en": "Brownies Cake", "name_ar": "براونيز كيك", "price": 80 },
+      { "name_en": "Brownies with Ice Cream", "name_ar": "براونيز ايس", "price": 85 },
+      { "name_en": "Molten Cake", "name_ar": "مولتن كيك", "price": 85 },
+      { "name_en": "Molten Cake with Ice Cream", "name_ar": "مولتن كيك ايس", "price": 100 }
+    ],
+    "soda_cocktails": [
+      { "name_en": "Blue Sky", "name_ar": "بلوس سكاي", "price": 60, "ingredients": ["Soda", "Blueberry Flavor"] },
+      { "name_en": "Black Forest", "name_ar": "بلاك فورست", "price": 60, "ingredients": ["Soda", "Red Berry Flavor"] },
+      { "name_en": "Afternoon", "name_ar": "أفترنون", "price": 60, "ingredients": ["Soda", "Peach Flavor"] },
+      { "name_en": "Green Land", "name_ar": "جرين لاند", "price": 60, "ingredients": ["Soda", "Kiwi Flavor"] },
+      { "name_en": "Love Passion", "name_ar": "لوف باشن", "price": 60, "ingredients": ["Soda", "Strawberry Flavor"] },
+      { "name_en": "Tropical Land", "name_ar": "تروبيكال لاند", "price": 60, "ingredients": ["Soda", "Pineapple Flavor"] },
+      { "name_en": "Mojito", "name_ar": "موجيتو", "price": 65, "ingredients": ["Soda", "Lemon Slices", "Fresh Mint"] },
+      { "name_en": "Mojito Incense", "name_ar": "موجيتو إنسنس", "price": 75 }
+    ],
+    "soft_drinks": [
+      { "name_en": "Pepsi", "name_ar": "بيبسي", "price": 45 },
+      { "name_en": "Miranda", "name_ar": "ميرندا", "price": 45 },
+      { "name_en": "7-Up", "name_ar": "سفن", "price": 45 },
+      { "name_en": "Schweppes Gold", "name_ar": "شويبس جولد", "price": 45 },
+      { "name_en": "Birell", "name_ar": "بيريل", "price": 45 },
+      { "name_en": "Fayrouz", "name_ar": "فيروز", "price": 45 },
+      { "name_en": "Red Bull", "name_ar": "ريد بول", "price": 75 },
+      { "name_en": "Twist", "name_ar": "تويست", "price": 45 },
+      { "name_en": "Mineral Water", "name_ar": "مياه معدنية صغيرة", "price": 15 }
+    ],
+    "cold_drinks": [
+      { "name_en": "Iced Coffee", "name_ar": "ايس كوفي", "price": 60 },
+      { "name_en": "Iced Cappuccino", "name_ar": "ايس كابتشينو", "price": 70 },
+      { "name_en": "Iced Latte", "name_ar": "ايس لاتيه", "price": 70 },
+      { "name_en": "Iced Mocha", "name_ar": "ايس موكا", "price": 70 },
+      { "name_en": "Iced Chocolate", "name_ar": "ايس شوكليت", "price": 70 },
+      { "name_en": "Frappuccino", "name_ar": "فرابوتشينو", "price": 60 },
+      { "name_en": "Flavored Frappuccino", "name_ar": "فرابوتشينو فليفور", "price": 70, "flavors": ["Chocolate", "Caramel"] }
+    ],
+    "milkshakes": [
+      { "name_en": "Mango/Strawberry", "name_ar": "مانجو / فراولة", "price": 70 },
+      { "name_en": "Vanilla/Chocolate", "name_ar": "فانيلا / شوكليت", "price": 70 },
+      { "name_en": "Caramel/Hazelnut", "name_ar": "كراميل / بندق", "price": 70 },
+      { "name_en": "Fruit Shake", "name_ar": "فروت شيك", "price": 75 },
+      { "name_en": "Oreo Shake", "name_ar": "أوريو شيك", "price": 80 },
+      { "name_en": "Galaxy Shake", "name_ar": "جلاكسي", "price": 90 },
+      { "name_en": "KitKat Shake", "name_ar": "كيت كات", "price": 90 },
+      { "name_en": "Snickers Shake", "name_ar": "سنيكرز", "price": 90 },
+      { "name_en": "Mars Shake", "name_ar": "مارس", "price": 90 },
+      { "name_en": "Bounty Shake", "name_ar": "باونتي", "price": 90 }
+    ],
+    "cocktails": [
+      { "name_en": "Incense Cocktail", "name_ar": "كوكتيل انسنس", "price": 80, "ingredients": ["Mango", "Blackberry", "Guava", "Banana"] },
+      { "name_en": "Florida", "name_ar": "فلوريدا", "price": 65, "ingredients": ["Mango", "Guava", "Strawberry"] },
+      { "name_en": "Passion", "name_ar": "باشن", "price": 65, "ingredients": ["Orange", "Peach", "Pineapple"] },
+      { "name_en": "Amazon", "name_ar": "أمازون", "price": 75, "ingredients": ["Mango", "Peach", "Kiwi"] },
+      { "name_en": "Mango Banana", "name_ar": "مانجو بانانا", "price": 65, "ingredients": ["Mango", "Banana", "Vanilla"] },
+      { "name_en": "BB Love", "name_ar": "بي بي لوف", "price": 65, "ingredients": ["Peach", "Strawberry"] },
+      { "name_en": "Four Seasons", "name_ar": "فور سيزونز", "price": 75, "ingredients": ["Mango", "Guava", "Kiwi", "Strawberry"] }
+    ],
+    "smoothies": [
+      { "name_en": "Mango Smoothie", "name_ar": "سموذي مانجو", "price": 70 },
+      { "name_en": "Strawberry Smoothie", "name_ar": "سموذي فراولة", "price": 70 },
+      { "name_en": "Kiwi Smoothie", "name_ar": "سموذي كيوي", "price": 70 },
+      { "name_en": "Lemon Mint Smoothie", "name_ar": "سموذي ليمون نعناع", "price": 55 },
+      { "name_en": "Mixed Fruit Smoothie", "name_ar": "سموذي ميكس فواكه", "price": 70 }
+    ],
+    "juices": [
+      { "name_en": "Mango", "name_ar": "مانجو", "price": 65 },
+      { "name_en": "Guava", "name_ar": "جوافة", "price": 65 },
+      { "name_en": "Strawberry", "name_ar": "فراولة", "price": 65 },
+      { "name_en": "Orange", "name_ar": "برتقال", "price": 60 },
+      { "name_en": "Pomegranate", "name_ar": "رمان", "price": 70 },
+      { "name_en": "Fresh Lemon", "name_ar": "ليمون فريش", "price": 45 },
+      { "name_en": "Lemon Mint", "name_ar": "ليمون نعناع", "price": 50 },
+      { "name_en": "Banana Milk", "name_ar": "موز باللبن", "price": 65 },
+      { "name_en": "Kiwi", "name_ar": "كيوي", "price": 70 },
+      { "name_en": "Avocado", "name_ar": "أفوكادو", "price": 100 }
+    ],
+    "hot_drinks": [
+      { "name_en": "Mint Tea", "name_ar": "شاي نعناع", "price": 25 },
+      { "name_en": "Green Tea with Mint", "name_ar": "شاي أخضر بالنعناع", "price": 30 },
+      { "name_en": "Flavored Tea", "name_ar": "شاي نكهات", "price": 30 },
+      { "name_en": "Hibiscus", "name_ar": "كركديه", "price": 30 },
+      { "name_en": "Mint Leaves", "name_ar": "نعناع", "price": 30 },
+      { "name_en": "Anise", "name_ar": "ينسون", "price": 30 },
+      { "name_en": "Hot Lemon", "name_ar": "ليمون ساخن", "price": 25 },
+      { "name_en": "Herbal Cocktail with Honey", "name_ar": "كوكتيل أعشاب بالعسل", "price": 30 },
+      { "name_en": "Cinnamon/Ginger (Plain)", "name_ar": "قرفة / زنجبيل ساده", "price": 30 },
+      { "name_en": "Cinnamon/Ginger with Milk", "name_ar": "قرفة / زنجبيل بالحليب", "price": 45 },
+      { "name_en": "Plain Sahlab", "name_ar": "سحلب ساده", "price": 35 },
+      { "name_en": "Sahlab with Nuts", "name_ar": "سحلب مكسرات", "price": 55 },
+      { "name_en": "Sahlab with Fruits", "name_ar": "سحلب فواكه", "price": 55 },
+      { "name_en": "Hot Cider", "name_ar": "هوت سيدر", "price": 50 },
+      { "name_en": "Hummus El Sham", "name_ar": "حمص الشام", "price": 40 },
+      { "name_en": "Cortado", "name_ar": "كورادو", "price": 65 }
+    ],
+    "coffee": [
+      { "name_en": "Turkish Coffee (Single)", "name_ar": "قهوة تركي سنجل", "price": 40 },
+      { "name_en": "Turkish Coffee (Double)", "name_ar": "قهوة تركي دبل", "price": 47 },
+      { "name_en": "French Coffee", "name_ar": "قهوة فرنسي", "price": 50 },
+      { "name_en": "French Coffee (Double)", "name_ar": "قهوة فرنسي دبل", "price": 57 },
+      { "name_en": "Hazelnut Coffee", "name_ar": "قهوة بندق", "price": 55 },
+      { "name_en": "Nescafe", "name_ar": "نسكافيه", "price": 55 },
+      { "name_en": "Cappuccino", "name_ar": "كابتشينو", "price": 55 },
+      { "name_en": "Flavored Cappuccino", "name_ar": "كابتشينو بنكهة", "price": 65 },
+      { "name_en": "Cafe Latte", "name_ar": "كافيه لاتيه", "price": 55 },
+      { "name_en": "Cafe Mocha", "name_ar": "كافيه موكا", "price": 60 },
+      { "name_en": "Espresso", "name_ar": "اسبريسو", "price": 45 },
+      { "name_en": "Espresso (Double)", "name_ar": "اسبريسو دبل", "price": 50 },
+      { "name_en": "Flat White", "name_ar": "فلات وايت", "price": 50 },
+      { "name_en": "Macchiato", "name_ar": "ماكياتو", "price": 55 },
+      { "name_en": "Macchiato (Double)", "name_ar": "ماكياتو دبل", "price": 50 },
+      { "name_en": "Hot Chocolate", "name_ar": "هوت شوكليت", "price": 50 }
+    ],
+    "shisha": [
+      { "name_en": "Regular Shisha", "name_ar": "شيشة عادية", "price": 30 },
+      { "name_en": "Disposable Hose", "name_ar": "لي صحي", "price": 15 },
+      { "name_en": "Premium Shisha", "name_ar": "شيشة فاخر", "price": 100 },
+      { "name_en": "Mix Shisha", "name_ar": "شيشة مكس", "price": 100 },
+      { "name_en": "Special Shisha", "name_ar": "شيشة سبيشال", "price": 120 }
+    ]
+  }
+}

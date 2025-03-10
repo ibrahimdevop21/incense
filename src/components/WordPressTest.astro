@@ -1,0 +1,74 @@
+---
+import { getMenuCategories, getMenuItems } from '../utils/wordpress';
+
+const apiUrl = import.meta.env.PUBLIC_WORDPRESS_API_URL;
+let error = null;
+let categories = [];
+let menuItems = [];
+
+try {
+  // Test fetching both categories and menu items
+  const [fetchedCategories, fetchedItems] = await Promise.all([
+    getMenuCategories(),
+    getMenuItems()
+  ]);
+  
+  categories = fetchedCategories;
+  menuItems = fetchedItems;
+} catch (e) {
+  error = e.message;
+}
+---
+
+<div class="max-w-4xl mx-auto p-6">
+  <h2 class="text-2xl font-bold mb-4">WordPress Connection Test</h2>
+  
+  <div class="bg-gray-100 p-4 rounded-lg mb-6">
+    <h3 class="font-semibold">Environment Configuration:</h3>
+    <p class="font-mono text-sm mt-2">WordPress API URL: {apiUrl}</p>
+  </div>
+
+  {error ? (
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+      <p class="font-bold">Error:</p>
+      <p>{error}</p>
+    </div>
+  ) : (
+    <div class="space-y-6">
+      <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+        <p class="font-bold">✓ Connection Successful</p>
+      </div>
+
+      <div class="bg-white shadow rounded-lg p-6">
+        <h3 class="text-xl font-semibold mb-4">Menu Categories</h3>
+        {categories.length === 0 ? (
+          <p class="text-gray-500">No categories found. Create some in WordPress admin!</p>
+        ) : (
+          <ul class="list-disc list-inside">
+            {categories.map(category => (
+              <li>{category.name} ({category.slug})</li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      <div class="bg-white shadow rounded-lg p-6">
+        <h3 class="text-xl font-semibold mb-4">Menu Items</h3>
+        {menuItems.length === 0 ? (
+          <p class="text-gray-500">No menu items found. Create some in WordPress admin!</p>
+        ) : (
+          <ul class="list-disc list-inside">
+            {menuItems.map(item => (
+              <li>
+                {item.title}
+                <span class="text-sm text-gray-500">
+                  ({item.menuCategories.nodes.map(cat => cat.name).join(', ')})
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  )}
+</div>

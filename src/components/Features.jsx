@@ -25,7 +25,7 @@ const features = [
   {
     icon: '👑',
     title: 'VIP Rooms',
-    description: 'Private rooms for a more intimate and exclusive experience'
+    description: 'Private rooms for more exclusive experience'
   },
   {
     icon: '🎵',

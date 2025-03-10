@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "8000:80"  # Access WordPress on localhost:8000
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: ibrahimdevop21
+      WORDPRESS_DB_PASSWORD: QWE123@asd  # Replace with a strong password
+    volumes:
+      - wordpress_data:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: Myaya@1930  # Replace with a strong root password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: ibrahimdevop21
+      MYSQL_PASSWORD: QWE123@asd  # Use the same password as above
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  wordpress_data:
+  db_data:

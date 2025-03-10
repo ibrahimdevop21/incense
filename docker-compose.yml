@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb:10.5
+    container_name: incense-db
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: QWE123@asd
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: ibrahimdevop21
+      MYSQL_PASSWORD: QWE123@asd
+    networks:
+      - wordpress_net
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    container_name: incense-wordpress
+    ports:
+      - "8080:80"
+    restart: always
+    volumes:
+      - ./my-wordpress-cms:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: incense-db
+      WORDPRESS_DB_USER: ibrahimdevop21
+      WORDPRESS_DB_PASSWORD: QWE123@asd
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: 1
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_HOME', 'http://localhost:8080');
+        define('WP_SITEURL', 'http://localhost:8080');
+    networks:
+      - wordpress_net
+
+volumes:
+  db_data: {}
+
+networks:
+  wordpress_net:
+    driver: bridge
